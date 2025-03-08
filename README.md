@@ -1,2 +1,2 @@
 # Homeworks
-Homework Corte 1, Estructuras de Datos y Algoritmos 2
+Homeworks, Parciales y Challenges, Estructuras de Datos y Algoritmos 2
