@@ -1,8 +1,9 @@
 
 import './App.css'
-import FirstApp from './FirstApp'
+import Challenge2y4 from './Challenge2y4'
 import Challenge3 from './Challenge3'
 import { Father } from './Father'
+import FirstApp from './FirstApp'
 
 function App() {
 
@@ -14,6 +15,11 @@ function App() {
       <div className="bordes">
         <FirstApp/>
       </div>
+      <div className="bordes">
+        <Challenge2y4/>
+      </div>
+    </div> 
+    <div className="flex">
       <div className="bordes">
         <Challenge3/>
       </div>
