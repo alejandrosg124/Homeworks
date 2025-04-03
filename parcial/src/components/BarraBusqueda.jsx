@@ -16,6 +16,16 @@ export const BarraBusqueda = ({ imagenId, setImagenId, agregarImagen }) => {
                 onChange={(e) => setImagenId(e.target.value)} 
             />
 
+            {imagenId && (
+                <div className="preview">
+                    <p>Previsualización de imagen #{imagenId}:</p>
+              <img
+                src={`https://picsum.photos/id/${imagenId}/200/300`}
+                alt={`Imagen ${imagenId}`}
+              />
+                </div>
+            )}
+
             <p>Agregarás la imagen #{imagenId}</p>
 
             <button onClick={agregarImagen}>Agregar la imagen</button>
