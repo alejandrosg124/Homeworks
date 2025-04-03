@@ -1,24 +1,26 @@
-import { useState } from "react"
-export const BarraBusqueda = () => {
-    
-    const [texto, setTexto] = useState("")
-    const [imagenes, setImagenes] = useState([]);
 
-    const handleChange = (event) => {
-        setTexto(event.target.value);
-    };
-
+export const BarraBusqueda = ({ imagenId, setImagenId, agregarImagen }) => {
 
     return (
-        <form>
-            <input type="text" placeholder="Buscar" onChange={handleChange} />
-            <p>Mostrando Imágenes de: {texto}</p>
+        <>
+        <h1>Busca y agrega tus imágenes</h1>
+        <h2>Parcial #1 - Alejandro Solarte</h2>
+        <h2>- - -</h2>
+        <div className="bordes">
+        <h3>Escribe aquí:</h3>
 
-            <ul>
-                {imagenes.map((imagenes, index) => (
-                    <li key ={index}>{imagenes}</li>
-                ))}
-            </ul>
+        <form onSubmit={(e) => e.preventDefault()}>
+            <input type="text"
+                value={imagenId}
+                placeholder="Agregar Imagen Por ID"
+                onChange={(e) => setImagenId(e.target.value)} 
+            />
+
+            <p>Agregarás la imagen #{imagenId}</p>
+
+            <button onClick={agregarImagen}>Agregar la imagen</button>
         </form>
+        </div>
+        </>
     )
 }

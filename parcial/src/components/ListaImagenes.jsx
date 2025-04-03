@@ -1,48 +1,43 @@
 import { useState } from "react";
-
-var imageId = 100;
-
+import { BarraBusqueda } from "./BarraBusqueda";
+import './componentes.css'
 
 export const ListaImagenes = () => {
 
-    const [texto, setTexto] = useState("");
+    const [buscar, setBuscar] = useState("");
     const [imagenes, setImagenes] = useState([]);
+    const [imagenId, setImagenId] = useState("");
 
     const agregarImagen = () => {
-        if (imagenesId) {
-
+        if (imagenId) {
           const nuevaImg = {
-            id: imageId,
-            url: `https://picsum.photos/id/${imageId}/200/300`,
-      };
-      setImagenes([...imagenes, nuevaImg]);
-      setImagenesId("");
+            id: imagenId,
+            url: `https://picsum.photos/id/${imagenId}/200/300`,
+          };
+        setImagenes((prevImagenes) => [...prevImagenes, nuevaImg]);
+        setImagenId("");
     }};
     
-
-    const filtroImagenes = imagenes.filter((imagenes) =>
-        imagenes.id.includes(texto)
+    const filtroImagenes = imagenes.filter((imagen) =>
+        imagen.id.includes(buscar)
     );
 
     return (
-        <div>
-          <button onClick={agregarImagen}>Agregar la imagen</button>
-    
-          <input type="text" value={texto} 
-            onChange={(e) => setTexto(e.target.value)}
-            placeholder="Buscar"
+        <>
+          <BarraBusqueda 
+            imagenId={imagenId}
+            setImagenId={setImagenId}
+            agregarImagen={agregarImagen}
           />
 
-        <img src={`https://picsum.photos/id/${imageId}/200/300`} alt={`Imagen ${imagenes.id}`}/>
-            <div>
-            {filtroImagenes.map((imagenes) => (
-              <div key={imagenes.id} >
-
-                <img src={imagenes.url} alt={`Imagen ${imagenes.id}`}/>
-                <p>{imagenes.id}</p>
+          <div className="imagenes-container">
+            {filtroImagenes.map((imagen) => (
+              <div key={imagen.id} >
+                <img src={imagen.url} alt={`Imagen ${imagen.id}`}/>
+                <p>Imagen con id #{imagen.id}</p>
               </div>
             ))}
             </div>
-        </div>
+        </>
     );
 }

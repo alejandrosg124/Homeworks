@@ -7,11 +7,7 @@ function App() {
   
   return (
     <>
-      <div className= "card">
-        <BarraBusqueda/>
-      </div>
       <ListaImagenes/>
-    
     </>
   )
 }
