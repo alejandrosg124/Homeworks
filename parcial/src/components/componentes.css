@@ -24,7 +24,6 @@ input {
 
 input::placeholder {
     color: #717171;
-    font-style: italic;
 }
 
 input:hover {
