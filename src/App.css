@@ -68,8 +68,12 @@ h1, h3, h2, h4, h5, label {
 .client-list ul {
   list-style: none;
   padding: 0;
-  width: 300px;
+  width: 600px;
 
+}
+
+.client-list {
+  width: 600px;
 }
 
 .client-list li {
@@ -95,7 +99,7 @@ h1, h3, h2, h4, h5, label {
   padding: 5px;
   background: #8681a1;
   border-left: 3px solid #5e548f;
-  width: 82%;
+  width: 93%;
 
 }
 
@@ -104,5 +108,5 @@ h1, h3, h2, h4, h5, label {
   padding: 5px;
   background: #8681a1;
   border-left: 3px solid #5e548f;
-  width: 82%;
+  width: 93%;
 }
