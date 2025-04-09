@@ -1,0 +1,108 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(98, 104, 120);
+}
+
+.paddings {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1, h3, h2, h4, h5, label {
+  text-align: center;
+  color: #b9bad7;
+}
+
+.content {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.client-input, .client-list {
+  flex: 1;
+  background: #323547;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.client-input form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 250px;
+}
+
+.client-input label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.client-input input[type="text"],
+.client-input textarea {
+  padding: 8px;
+  border: 1px solid #595571;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.client-input textarea {
+  min-height: 100px;
+}
+
+.client-input button {
+  background: #535d93;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.client-input button:hover {
+  background: #2f3b52;
+}
+
+.client-list ul {
+  list-style: none;
+  padding: 0;
+  width: 300px;
+
+}
+
+.client-list li {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: rgb(177, 175, 188);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.client-list h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+.client-list h5 {
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.consultas li {
+  margin-bottom: 5px;
+  padding: 5px;
+  background: #8681a1;
+  border-left: 3px solid #5e548f;
+  width: 82%;
+
+}
+
+.reclamos li {
+  margin-bottom: 5px;
+  padding: 5px;
+  background: #8681a1;
+  border-left: 3px solid #5e548f;
+  width: 82%;
+}
